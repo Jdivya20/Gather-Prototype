@@ -15,12 +15,12 @@
             let x=0;
             let y=0;
 
-            // let w= Math.floor(Math.random()*1000);
-            // let h= Math.floor(Math.random()*700);
+            let w= Math.floor(Math.random()*1000);
+            let h= Math.floor(Math.random()*700);
             // ctx.strokeRect(w,h,20,20)
             // document.body.appendChild(c)      
             img1.onload = () => { 
-                ctx.drawImage(img1, 500, 500);
+                ctx.drawImage(img1, w, h);
                 // ctx.drawImage(img, 0, 0);
             };
             img2.onload = () => { 
@@ -45,7 +45,7 @@
                 ctx.drawImage(img2,x,y)
                 // ctx.fillRect(x,y,20,20);
                 // ctx.stroke();
-                ctx.drawImage(img1, 500, 500);
+                ctx.drawImage(img1, w, h);
                 
             }
             document.onkeydown=move;
