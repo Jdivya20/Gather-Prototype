@@ -8,25 +8,37 @@
         <script>
             var c = document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
-            const img1 = new Image();
-            const img2 = new Image(); 
-            img1.src = 'avatar.png';
-            img2.src = 'avatar.png';
+
+            //required when avatar images are added
+            // var img1 = new Image();
+            // var img2 = new Image(); 
+            // img1.src = 'wolf.png';
+            // img2.src = 'avatar.png';
             let x=0;
             let y=0;
 
+            for(let i=0;i<10;i++){
             let w= Math.floor(Math.random()*1000);
             let h= Math.floor(Math.random()*700);
-            // ctx.strokeRect(w,h,20,20)
-            // document.body.appendChild(c)      
-            img1.onload = () => { 
-                ctx.drawImage(img1, w, h);
-                // ctx.drawImage(img, 0, 0);
-            };
-            img2.onload = () => { 
-                // ctx.drawImage(img2, w, h);
-                ctx.drawImage(img2, x, y);
-            };
+            var red = Math.floor(Math.random() * 255);
+            var green = Math.floor(Math.random() * 255);
+            var blue = Math.floor(Math.random() * 255);
+            // ctx.fillStyle = '#8ED6FF';
+            ctx.fillStyle = "rgb(" + red + "," + green + "," + blue + " )";  
+            ctx.fillRect(w,h,20,20);
+            }
+
+
+
+            //Creating new images
+            // img1.onload = () => { 
+            //     ctx.drawImage(img1, w, h);
+            // };
+            // img2.onload = () => { 
+            //     ctx.drawImage(img2, x, y);
+            // };
+
+            //Function to move the avatar
             function move(e){
                 if(e.keyCode==39){
                     x+=5;
@@ -41,13 +53,11 @@
                     y+=5;
                 }
                 c.width=c.width;
-                // ctx.strokeRect(w,h,20,20)
                 ctx.drawImage(img2,x,y)
-                // ctx.fillRect(x,y,20,20);
-                // ctx.stroke();
-                ctx.drawImage(img1, w, h);
-                
+                ctx.drawImage(img1, w, h); 
             }
+
+            //keydown event calls move fn whenever arrow keys are pressed.
             document.onkeydown=move;
         </script>
     </body>
