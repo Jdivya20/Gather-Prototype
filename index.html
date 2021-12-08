@@ -27,6 +27,27 @@
                 // ctx.drawImage(img2, w, h);
                 ctx.drawImage(img2, x, y);
             };
+            function move(e){
+                if(e.keyCode==39){
+                    x+=5;
+                }
+                if(e.keyCode==37){
+                    x-=5;
+                }
+                if(e.keyCode==38){
+                    y-=5;
+                }
+                if(e.keyCode==40){
+                    y+=5;
+                }
+                // ctx.strokeRect(w,h,20,20)
+                ctx.drawImage(img2,x,y)
+                // ctx.fillRect(x,y,20,20);
+                // ctx.stroke();
+                ctx.drawImage(img1, 500, 500);
+                
+            }
+            document.onkeydown=move;
         </script>
     </body>
 </html>
