@@ -15,10 +15,10 @@
             // document.addEventListener()
             const img = new Image(); 
             img.src = 'avatar.png';
-            // let w= Math.floor(Math.random()*1000);
-            // let h= Math.floor(Math.random()*700);      
+            let w= Math.floor(Math.random()*1000);
+            let h= Math.floor(Math.random()*700);      
             img.onload = () => { 
-                // ctx.drawImage(img, w, h);
+                ctx.drawImage(img, w, h);
                 ctx.drawImage(img, 0, 0);
             };
         </script>
