@@ -17,19 +17,33 @@
             let x=0;
             let y=0;
 
+            // for(let i=0;i<10;i++){
+            // let w= Math.floor(Math.random()*1000);
+            // let h= Math.floor(Math.random()*700);
+            // var red = Math.floor(Math.random() * 255);
+            // var green = Math.floor(Math.random() * 255);
+            // var blue = Math.floor(Math.random() * 255);
+            // // ctx.fillStyle = '#8ED6FF';
+            // ctx.fillStyle = "rgb(" + red + "," + green + "," + blue + " )";  
+            // ctx.fillRect(w,h,20,20);
+            // }
+
+
+            //function to generate random colors
+            function generateRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+            }
             for(let i=0;i<10;i++){
             let w= Math.floor(Math.random()*1000);
             let h= Math.floor(Math.random()*700);
-            var red = Math.floor(Math.random() * 255);
-            var green = Math.floor(Math.random() * 255);
-            var blue = Math.floor(Math.random() * 255);
-            // ctx.fillStyle = '#8ED6FF';
-            ctx.fillStyle = "rgb(" + red + "," + green + "," + blue + " )";  
+            ctx.fillStyle=generateRandomColor();
             ctx.fillRect(w,h,20,20);
             }
-
-
-
             //Creating new images
             // img1.onload = () => { 
             //     ctx.drawImage(img1, w, h);
