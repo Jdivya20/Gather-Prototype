@@ -73,43 +73,48 @@ function move(e){
 document.onkeydown=move;
 
 function createAvatar(){
-  var cardbody=  `<div class="card" style="width: 28rem;">
+  var cardbody=  `<div class="card mt-5" style="width: 28rem;  margin:auto;">
   <div class="card-body">
-    <h5 class="card-title">Gather Town</h5>
-    <p class="card-text">Create your avatar!!</p>
+    <h5 class="card-title" style="text-align:center;">Gather Town</h5>
+    <p class="card-text" style="text-align:center;">Select your avatar!!</p>
     <div class="container">
-  <div class="row">
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-  </div>
+        <div class="row">
+            <div class="col">
+            <img src="boy1.png" style="width:50px; height:50px;" onclick="loadCanvas()"/>
+            </div>
+            <div class="col">
+            <img src="girl2.png" style="width:50px; height:50px;" onclick="loadCanvas()"/>
+            </div>
+            <div class="col">
+            <img src="boy3.png" style="width:50px; height:50px;" onclick="loadCanvas()"/>
+            </div>
+            <div class="col">
+            <img src="girl4.png" style="width:50px; height:50px;" onclick="loadCanvas()"/>
+            </div>
+        </div>
+        <br/>
 
-  <div class="row">
-    <div class="col">
-      Column
+        <div class="row">
+            <div class="col">
+            <img src="girl1.png" style="width:50px; height:50px;" onclick="loadCanvas()"/>
+            </div>
+            <div class="col">
+            <img src="boy2.png" style="width:50px; height:50px;" onclick="loadCanvas()"/>
+            </div>
+            <div class="col">
+            <img src="boy4.png" style="width:50px; height:50px;" onclick="loadCanvas()"/>
+            </div>
+            <div class="col">
+            <img src="girl3.png" style="width:50px; height:50px;" onclick="loadCanvas()"/>
+            </div>
+        </div>
     </div>
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-    <div class="col">
-      Column
-    </div>
-  </div>
-</div>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
   </div>
 </div>`
 document.getElementById("root").innerHTML=cardbody;
+}
+
+//function to display the canvas
+function loadCanvas(){
+    
 }
