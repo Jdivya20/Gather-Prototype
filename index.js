@@ -59,48 +59,6 @@ function move(e){
 //keydown event calls move fn whenever arrow keys are pressed.
 document.onkeydown=move;
 
-// function createAvatar(){
-//   var cardbody=  `<div class="card mt-5" style="width: 28rem;  margin:auto;">
-//   <div class="card-body">
-//     <h5 class="card-title" style="text-align:center;">Gather Town</h5>
-//     <p class="card-text" style="text-align:center;">Select your avatar!!</p>
-//     <div class="container">
-//         <div class="row">
-//             <div class="col">
-//             <img src="1.png" style="width:50px; height:50px;" onclick="loadCanvas(1)"/>
-//             </div>
-//             <div class="col">
-//             <img src="2.png" style="width:50px; height:50px;" onclick="loadCanvas(2)"/>
-//             </div>
-//             <div class="col">
-//             <img src="3.png" style="width:50px; height:50px;" onclick="loadCanvas(3)"/>
-//             </div>
-//             <div class="col">
-//             <img src="4.png" style="width:50px; height:50px;" onclick="loadCanvas(4)"/>
-//             </div>
-//         </div>
-//         <br/>
-
-//         <div class="row">
-//             <div class="col">
-//             <img src="5.png" style="width:50px; height:50px;" onclick="loadCanvas(5)"/>
-//             </div>
-//             <div class="col">
-//             <img src="6.png" style="width:50px; height:50px;" onclick="loadCanvas(6)"/>
-//             </div>
-//             <div class="col">
-//             <img src="7.png" style="width:50px; height:50px;" onclick="loadCanvas(7)"/>
-//             </div>
-//             <div class="col">
-//             <img src="8.png" style="width:50px; height:50px;" onclick="loadCanvas(8)"/>
-//             </div>
-//         </div>
-//     </div>
-//   </div>
-// </div>`
-// document.getElementById("root").innerHTML=cardbody;
-// }
-
 //function to display the canvas
 function loadCanvas(id){
 
@@ -113,7 +71,8 @@ function loadCanvas(id){
     //required when avatar images are added
     var img1 = new Image();
     var img2 = new Image(); 
-    img1.src = player1;
+    img1.src = '8.png';
+    img2.src=player1;
     console.log(player1)
     // img2.src = '8.png';
     let x=0;
