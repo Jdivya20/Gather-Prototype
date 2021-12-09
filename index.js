@@ -8,22 +8,6 @@ let w= Math.floor(Math.random()*1000);
 let h= Math.floor(Math.random()*700);
 
 
-//create avatar
-
-
-
-// for(let i=0;i<10;i++){
-// let w= Math.floor(Math.random()*1000);
-// let h= Math.floor(Math.random()*700);
-// var red = Math.floor(Math.random() * 255);
-// var green = Math.floor(Math.random() * 255);
-// var blue = Math.floor(Math.random() * 255);
-// // ctx.fillStyle = '#8ED6FF';
-// ctx.fillStyle = "rgb(" + red + "," + green + "," + blue + " )";  
-// ctx.fillRect(w,h,20,20);
-// }
-
-
 //function to generate random colors
 // function generateRandomColor() {
 // var letters = '0123456789ABCDEF';
@@ -56,6 +40,22 @@ function move(e){
         y+=5;
     }
     loadCanvas(id);
+
+    //Checking  avatars in proximity
+    nearby();
+}
+
+
+
+//Function to check nearby avatars
+function nearby() {
+
+    console.log(obj);
+    var distance = Math.floor(Math.sqrt(Math.pow((obj["B"][0] - obj["A"][0]),2) + Math.pow((obj["B"][1] - obj["A"][1]),2) ))
+
+    if (distance < 250) {
+        console.log("Avatar nearby turn on mic and video");
+    }
 }
 
 
@@ -81,8 +81,10 @@ function loadCanvas(pic){
     //Creating new images
     img1.onload = () => { 
         ctx.drawImage(img1, w, h);
+        obj["A"] = [w,h];
     };
     img2.onload = () => { 
         ctx.drawImage(img2, x, y);
+        obj["B"] = [x,y];
     };
 }
