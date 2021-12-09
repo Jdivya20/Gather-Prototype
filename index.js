@@ -1,6 +1,11 @@
 
-
-
+//Global varibales
+var obj = {};
+var id;
+let x=0;
+let y=0;
+let w= Math.floor(Math.random()*1000);
+let h= Math.floor(Math.random()*700);
 
 
 //create avatar
@@ -50,9 +55,7 @@ function move(e){
     if(e.keyCode==40){
         y+=5;
     }
-    c.width=c.width;
-    ctx.drawImage(img2,x,y)
-    ctx.drawImage(img1, w, h); 
+    loadCanvas(id);
 }
 
 
@@ -60,8 +63,8 @@ function move(e){
 document.onkeydown=move;
 
 //function to display the canvas
-function loadCanvas(id){
-
+function loadCanvas(pic){
+    id = pic;
     console.log(id);
     var player1=id+'.png';
     var canvas = `<canvas id="myCanvas" width="1000" height="700" style="border:1px solid #000000; background-image: url('office.png'); background-size: contain;"></canvas>`
@@ -75,11 +78,6 @@ function loadCanvas(id){
     img2.src=player1;
     console.log(player1)
     // img2.src = '8.png';
-    let x=0;
-    let y=0;
-
-    let w= Math.floor(Math.random()*1000);
-    let h= Math.floor(Math.random()*700);
     //Creating new images
     img1.onload = () => { 
         ctx.drawImage(img1, w, h);
